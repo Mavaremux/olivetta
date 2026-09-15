@@ -87,136 +87,362 @@
 
         <!-- Encabezado -->
         <div class="section-heading centered reveal">
-          <p class="eyebrow">MENÚ ESPECIAL</p>
-          <h2>Un menú para disfrutar.</h2>
+          <p class="eyebrow">NUESTRA CARTA</p>
+          <h2>Pide lo que quieras,<br><em>como quieras.</em></h2>
         </div>
 
         <!-- Hero card del precio -->
         <div class="me-hero reveal">
           <div class="me-badge">
-            <span class="me-badge-label">Precio único</span>
-            <span class="me-badge-price">Ref&nbsp;14,99</span>
+            <span class="me-badge-label">Pide lo que quieras</span>
+            <span class="me-badge-price">Precio por ítem</span>
           </div>
           <div class="me-hero-info">
-            <p class="me-includes">Incluye postre y bebida &middot; Precios con IVA</p>
-            <p class="me-hours"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Lunes a domingo &middot; 12:00 m. – 5:00 p.m.</p>
+            <p class="me-includes">Elige plato fuerte, postre, bebida o combínalos · Precios por ítem</p>
+            <p class="me-hours"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Lunes a domingo · 12:00 m. – 5:00 p.m.</p>
           </div>
-          <a class="me-wa-btn" target="_blank" rel="noopener"
-             href="https://wa.me/584248445789?text=Hola%2C%20quisiera%20reservar%20el%20Men%C3%BA%20Especial%20Olivetta">
-            <svg width="18" height="18" viewBox="0 0 32 32" fill="currentColor"><path d="M16 0C7.163 0 0 7.163 0 16c0 2.823.736 5.47 2.02 7.773L0 32l8.47-2.003A15.94 15.94 0 0016 32c8.837 0 16-7.163 16-16S24.837 0 16 0zm8.03 22.21c-.34.956-1.98 1.83-2.72 1.948-.692.11-1.56.156-2.512-.158--.58-.19-1.327-.443-2.283-.868-4.01-1.734-6.63-5.81-6.83-6.08-.198-.27-1.62-2.157-1.62-4.115 0-1.957 1.026-2.92 1.39-3.316.365-.397.795-.497 1.06-.497.265 0 .53.003.762.014.244.012.572-.093.896.684.34.8 1.155 2.756 1.255 2.956.1.198.166.43.033.694-.133.264-.2.43-.397.66-.2.232-.42.517-.6.695-.198.198-.404.413-.174.81.23.397 1.02 1.683 2.19 2.726 1.505 1.343 2.774 1.757 3.17 1.955.398.2.63.167.864-.1.232-.265.993-1.16 1.258-1.557.265-.397.53-.33.895-.2.365.132 2.32 1.095 2.717 1.293.397.2.662.298.762.464.1.166.1.96-.24 1.917z"/></svg>
-            Reservar por WhatsApp
+          <a class="me-wa-btn" id="me-hero-wa" target="_blank" rel="noopener"
+             href="#" aria-disabled="true">
+            <svg width="18" height="18" viewBox="0 0 32 32" fill="currentColor"><path d="M16 0C7.163 0 0 7.163 0 16c0 2.823.736 5.47 2.02 7.773L0 32l8.47-2.003A15.94 15.94 0 0016 32c8.837 0 16-7.163 16-16S24.837 0 16 0zm8.03 22.21c-.34.956-1.98 1.83-2.72 1.948-.692.11-1.56.156-2.512-.158-.58-.19-1.327-.443-2.283-.868-4.01-1.734-6.63-5.81-6.83-6.08-.198-.27-1.62-2.157-1.62-4.115 0-1.957 1.026-2.92 1.39-3.316.365-.397.795-.497 1.06-.497.265 0 .53.003.762.014.244.012.572-.093.896.684.34.8 1.155 2.756 1.255 2.956.1.198.166.43.033.694-.133.264-.2.43-.397.66-.2.232-.42.517-.6.695-.198.198-.404.413-.174.81.23.397 1.02 1.683 2.19 2.726 1.505 1.343 2.774 1.757 3.17 1.955.398.2.63.167.864-.1.232-.265.993-1.16 1.258-1.557.265-.397.53-.33.895-.2.365.132 2.32 1.095 2.717 1.293.397.2.662.298.762.464.1.166.1.96-.24 1.917z"/></svg>
+            Pedir por WhatsApp
           </a>
         </div>
 
-        <!-- Categorías interactivas -->
-        <div class="me-categories reveal">
+        <div class="me-step-indicator reveal">
+          <p class="me-step-hint">Elige lo que quieras pedir: plato fuerte, postre, bebida o combínalos como prefieras.</p>
+        </div>
 
-          <!-- Entrada -->
-          <div class="me-cat">
+        <!-- Barra de navegación rápida por categorías (Práctica y estética para mobile y desktop) -->
+        <nav class="me-cat-nav reveal" aria-label="Navegación de categorías del menú">
+          <a href="#cat-entrada" class="me-nav-chip is-active" id="chip-entrada">
+            <span class="me-chip-icon">🫒</span>
+            <span class="me-chip-name">Entrada</span>
+            <span class="me-chip-status" id="chip-status-entrada">Opcional</span>
+          </a>
+          <a href="#cat-platos" class="me-nav-chip" id="chip-platos">
+            <span class="me-chip-icon">🍝</span>
+            <span class="me-chip-name">Platos Fuertes</span>
+            <span class="me-chip-status" id="chip-status-plato">1 a elegir</span>
+          </a>
+          <a href="#cat-postres" class="me-nav-chip" id="chip-postres">
+            <span class="me-chip-icon">🍮</span>
+            <span class="me-chip-name">Postres</span>
+            <span class="me-chip-status" id="chip-status-postre">1 a elegir</span>
+          </a>
+          <a href="#cat-bebidas" class="me-nav-chip" id="chip-bebidas">
+            <span class="me-chip-icon">🥤</span>
+            <span class="me-chip-name">Bebidas</span>
+            <span class="me-chip-status" id="chip-status-bebida">1 a elegir</span>
+          </a>
+        </nav>
+
+        <!-- Categorías interactivas con cards seleccionables -->
+        <div class="me-interactive-menu reveal">
+
+          <!-- 01 Entrada -->
+          <div class="me-cat-block me-cat-block--full" id="cat-entrada">
             <div class="me-cat-header">
-              <span class="me-cat-num">01</span>
-              <div>
-                <p class="me-cat-label">Incluida</p>
+              <div class="me-cat-heading-group">
+                <span class="me-cat-icon">🫒</span>
                 <h3 class="me-cat-title">Entrada</h3>
               </div>
-              <span class="me-cat-icon">🫒</span>
-            </div>
-            <ul class="me-items">
-              <li class="me-item">
-                <span class="me-item-dot"></span>
-                <span>Focaccia con hummus de berenjena y aceitunas</span>
-                <a class="me-item-wa" target="_blank" rel="noopener"
-                   href="https://wa.me/584248445789?text=Hola%2C%20quisiera%20el%20Men%C3%BA%20Especial%20con%20Focaccia%20con%20hummus%20de%20berenjena%20y%20aceitunas">
-                  <svg width="14" height="14" viewBox="0 0 32 32" fill="currentColor"><path d="M16 0C7.163 0 0 7.163 0 16c0 2.823.736 5.47 2.02 7.773L0 32l8.47-2.003A15.94 15.94 0 0016 32c8.837 0 16-7.163 16-16S24.837 0 16 0zm8.03 22.21c-.34.956-1.98 1.83-2.72 1.948-.692.11-1.56.156-2.512-.158-.58-.19-1.327-.443-2.283-.868-4.01-1.734-6.63-5.81-6.83-6.08-.198-.27-1.62-2.157-1.62-4.115 0-1.957 1.026-2.92 1.39-3.316.365-.397.795-.497 1.06-.497.265 0 .53.003.762.014.244.012.572-.093.896.684.34.8 1.155 2.756 1.255 2.956.1.198.166.43.033.694-.133.264-.2.43-.397.66-.2.232-.42.517-.6.695-.198.198-.404.413-.174.81.23.397 1.02 1.683 2.19 2.726 1.505 1.343 2.774 1.757 3.17 1.955.398.2.63.167.864-.1.232-.265.993-1.16 1.258-1.557.265-.397.53-.33.895-.2.365.132 2.32 1.095 2.717 1.293.397.2.662.298.762.464.1.166.1.96-.24 1.917z"/></svg>
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <!-- Platos Fuertes -->
-          <div class="me-cat">
-            <div class="me-cat-header">
-              <span class="me-cat-num">02</span>
-              <div>
-                <p class="me-cat-label">A elegir uno</p>
-                <h3 class="me-cat-title">Platos Fuertes</h3>
+              <div class="me-cat-status-badge">
+                <span class="me-badge-optional" id="badge-entrada-status">Opcional</span>
               </div>
-              <span class="me-cat-icon">🍝</span>
             </div>
-            <ul class="me-items">
-              <li class="me-item"><span class="me-item-dot"></span><span>Linguine Primavera con pollo</span><a class="me-item-wa" target="_blank" rel="noopener" href="https://wa.me/584248445789?text=Hola%2C%20quisiera%20el%20Men%C3%BA%20Especial%20con%20Linguine%20Primavera%20con%20pollo"><svg width="14" height="14" viewBox="0 0 32 32" fill="currentColor"><path d="M16 0C7.163 0 0 7.163 0 16c0 2.823.736 5.47 2.02 7.773L0 32l8.47-2.003A15.94 15.94 0 0016 32c8.837 0 16-7.163 16-16S24.837 0 16 0zm8.03 22.21c-.34.956-1.98 1.83-2.72 1.948-.692.11-1.56.156-2.512-.158-.58-.19-1.327-.443-2.283-.868-4.01-1.734-6.63-5.81-6.83-6.08-.198-.27-1.62-2.157-1.62-4.115 0-1.957 1.026-2.92 1.39-3.316.365-.397.795-.497 1.06-.497.265 0 .53.003.762.014.244.012.572-.093.896.684.34.8 1.155 2.756 1.255 2.956.1.198.166.43.033.694-.133.264-.2.43-.397.66-.2.232-.42.517-.6.695-.198.198-.404.413-.174.81.23.397 1.02 1.683 2.19 2.726 1.505 1.343 2.774 1.757 3.17 1.955.398.2.63.167.864-.1.232-.265.993-1.16 1.258-1.557.265-.397.53-.33.895-.2.365.132 2.32 1.095 2.717 1.293.397.2.662.298.762.464.1.166.1.96-.24 1.917z"/></svg></a></li>
-              <li class="me-item"><span class="me-item-dot"></span><span>Linguine Alfredo con pollo</span><a class="me-item-wa" target="_blank" rel="noopener" href="https://wa.me/584248445789?text=Hola%2C%20quisiera%20el%20Men%C3%BA%20Especial%20con%20Linguine%20Alfredo%20con%20pollo"><svg width="14" height="14" viewBox="0 0 32 32" fill="currentColor"><path d="M16 0C7.163 0 0 7.163 0 16c0 2.823.736 5.47 2.02 7.773L0 32l8.47-2.003A15.94 15.94 0 0016 32c8.837 0 16-7.163 16-16S24.837 0 16 0zm8.03 22.21c-.34.956-1.98 1.83-2.72 1.948-.692.11-1.56.156-2.512-.158-.58-.19-1.327-.443-2.283-.868-4.01-1.734-6.63-5.81-6.83-6.08-.198-.27-1.62-2.157-1.62-4.115 0-1.957 1.026-2.92 1.39-3.316.365-.397.795-.497 1.06-.497.265 0 .53.003.762.014.244.012.572-.093.896.684.34.8 1.155 2.756 1.255 2.956.1.198.166.43.033.694-.133.264-.2.43-.397.66-.2.232-.42.517-.6.695-.198.198-.404.413-.174.81.23.397 1.02 1.683 2.19 2.726 1.505 1.343 2.774 1.757 3.17 1.955.398.2.63.167.864-.1.232-.265.993-1.16 1.258-1.557.265-.397.53-.33.895-.2.365.132 2.32 1.095 2.717 1.293.397.2.662.298.762.464.1.166.1.96-.24 1.917z"/></svg></a></li>
-              <li class="me-item"><span class="me-item-dot"></span><span>Linguine Bologna</span><a class="me-item-wa" target="_blank" rel="noopener" href="https://wa.me/584248445789?text=Hola%2C%20quisiera%20el%20Men%C3%BA%20Especial%20con%20Linguine%20Bologna"><svg width="14" height="14" viewBox="0 0 32 32" fill="currentColor"><path d="M16 0C7.163 0 0 7.163 0 16c0 2.823.736 5.47 2.02 7.773L0 32l8.47-2.003A15.94 15.94 0 0016 32c8.837 0 16-7.163 16-16S24.837 0 16 0zm8.03 22.21c-.34.956-1.98 1.83-2.72 1.948-.692.11-1.56.156-2.512-.158-.58-.19-1.327-.443-2.283-.868-4.01-1.734-6.63-5.81-6.83-6.08-.198-.27-1.62-2.157-1.62-4.115 0-1.957 1.026-2.92 1.39-3.316.365-.397.795-.497 1.06-.497.265 0 .53.003.762.014.244.012.572-.093.896.684.34.8 1.155 2.756 1.255 2.956.1.198.166.43.033.694-.133.264-.2.43-.397.66-.2.232-.42.517-.6.695-.198.198-.404.413-.174.81.23.397 1.02 1.683 2.19 2.726 1.505 1.343 2.774 1.757 3.17 1.955.398.2.63.167.864-.1.232-.265.993-1.16 1.258-1.557.265-.397.53-.33.895-.2.365.132 2.32 1.095 2.717 1.293.397.2.662.298.762.464.1.166.1.96-.24 1.917z"/></svg></a></li>
-              <li class="me-item"><span class="me-item-dot"></span><span>Linguine Filetto Bettina</span><a class="me-item-wa" target="_blank" rel="noopener" href="https://wa.me/584248445789?text=Hola%2C%20quisiera%20el%20Men%C3%BA%20Especial%20con%20Linguine%20Filetto%20Bettina"><svg width="14" height="14" viewBox="0 0 32 32" fill="currentColor"><path d="M16 0C7.163 0 0 7.163 0 16c0 2.823.736 5.47 2.02 7.773L0 32l8.47-2.003A15.94 15.94 0 0016 32c8.837 0 16-7.163 16-16S24.837 0 16 0zm8.03 22.21c-.34.956-1.98 1.83-2.72 1.948-.692.11-1.56.156-2.512-.158-.58-.19-1.327-.443-2.283-.868-4.01-1.734-6.63-5.81-6.83-6.08-.198-.27-1.62-2.157-1.62-4.115 0-1.957 1.026-2.92 1.39-3.316.365-.397.795-.497 1.06-.497.265 0 .53.003.762.014.244.012.572-.093.896.684.34.8 1.155 2.756 1.255 2.956.1.198.166.43.033.694-.133.264-.2.43-.397.66-.2.232-.42.517-.6.695-.198.198-.404.413-.174.81.23.397 1.02 1.683 2.19 2.726 1.505 1.343 2.774 1.757 3.17 1.955.398.2.63.167.864-.1.232-.265.993-1.16 1.258-1.557.265-.397.53-.33.895-.2.365.132 2.32 1.095 2.717 1.293.397.2.662.298.762.464.1.166.1.96-.24 1.917z"/></svg></a></li>
-              <li class="me-item"><span class="me-item-dot"></span><span>Trío de Pastas Sinaí</span><a class="me-item-wa" target="_blank" rel="noopener" href="https://wa.me/584248445789?text=Hola%2C%20quisiera%20el%20Men%C3%BA%20Especial%20con%20Tr%C3%ADo%20de%20Pastas%20Sina%C3%AD"><svg width="14" height="14" viewBox="0 0 32 32" fill="currentColor"><path d="M16 0C7.163 0 0 7.163 0 16c0 2.823.736 5.47 2.02 7.773L0 32l8.47-2.003A15.94 15.94 0 0016 32c8.837 0 16-7.163 16-16S24.837 0 16 0zm8.03 22.21c-.34.956-1.98 1.83-2.72 1.948-.692.11-1.56.156-2.512-.158-.58-.19-1.327-.443-2.283-.868-4.01-1.734-6.63-5.81-6.83-6.08-.198-.27-1.62-2.157-1.62-4.115 0-1.957 1.026-2.92 1.39-3.316.365-.397.795-.497 1.06-.497.265 0 .53.003.762.014.244.012.572-.093.896.684.34.8 1.155 2.756 1.255 2.956.1.198.166.43.033.694-.133.264-.2.43-.397.66-.2.232-.42.517-.6.695-.198.198-.404.413-.174.81.23.397 1.02 1.683 2.19 2.726 1.505 1.343 2.774 1.757 3.17 1.955.398.2.63.167.864-.1.232-.265.993-1.16 1.258-1.557.265-.397.53-.33.895-.2.365.132 2.32 1.095 2.717 1.293.397.2.662.298.762.464.1.166.1.96-.24 1.917z"/></svg></a></li>
-              <li class="me-item"><span class="me-item-dot"></span><span>Raviolis de ricota y espinaca</span><a class="me-item-wa" target="_blank" rel="noopener" href="https://wa.me/584248445789?text=Hola%2C%20quisiera%20el%20Men%C3%BA%20Especial%20con%20Raviolis%20de%20ricota%20y%20espinaca"><svg width="14" height="14" viewBox="0 0 32 32" fill="currentColor"><path d="M16 0C7.163 0 0 7.163 0 16c0 2.823.736 5.47 2.02 7.773L0 32l8.47-2.003A15.94 15.94 0 0016 32c8.837 0 16-7.163 16-16S24.837 0 16 0zm8.03 22.21c-.34.956-1.98 1.83-2.72 1.948-.692.11-1.56.156-2.512-.158-.58-.19-1.327-.443-2.283-.868-4.01-1.734-6.63-5.81-6.83-6.08-.198-.27-1.62-2.157-1.62-4.115 0-1.957 1.026-2.92 1.39-3.316.365-.397.795-.497 1.06-.497.265 0 .53.003.762.014.244.012.572-.093.896.684.34.8 1.155 2.756 1.255 2.956.1.198.166.43.033.694-.133.264-.2.43-.397.66-.2.232-.42.517-.6.695-.198.198-.404.413-.174.81.23.397 1.02 1.683 2.19 2.726 1.505 1.343 2.774 1.757 3.17 1.955.398.2.63.167.864-.1.232-.265.993-1.16 1.258-1.557.265-.397.53-.33.895-.2.365.132 2.32 1.095 2.717 1.293.397.2.662.298.762.464.1.166.1.96-.24 1.917z"/></svg></a></li>
-              <li class="me-item"><span class="me-item-dot"></span><span>Raviolis de carne</span><a class="me-item-wa" target="_blank" rel="noopener" href="https://wa.me/584248445789?text=Hola%2C%20quisiera%20el%20Men%C3%BA%20Especial%20con%20Raviolis%20de%20carne"><svg width="14" height="14" viewBox="0 0 32 32" fill="currentColor"><path d="M16 0C7.163 0 0 7.163 0 16c0 2.823.736 5.47 2.02 7.773L0 32l8.47-2.003A15.94 15.94 0 0016 32c8.837 0 16-7.163 16-16S24.837 0 16 0zm8.03 22.21c-.34.956-1.98 1.83-2.72 1.948-.692.11-1.56.156-2.512-.158-.58-.19-1.327-.443-2.283-.868-4.01-1.734-6.63-5.81-6.83-6.08-.198-.27-1.62-2.157-1.62-4.115 0-1.957 1.026-2.92 1.39-3.316.365-.397.795-.497 1.06-.497.265 0 .53.003.762.014.244.012.572-.093.896.684.34.8 1.155 2.756 1.255 2.956.1.198.166.43.033.694-.133.264-.2.43-.397.66-.2.232-.42.517-.6.695-.198.198-.404.413-.174.81.23.397 1.02 1.683 2.19 2.726 1.505 1.343 2.774 1.757 3.17 1.955.398.2.63.167.864-.1.232-.265.993-1.16 1.258-1.557.265-.397.53-.33.895-.2.365.132 2.32 1.095 2.717 1.293.397.2.662.298.762.464.1.166.1.96-.24 1.917z"/></svg></a></li>
-              <li class="me-item"><span class="me-item-dot"></span><span>Insalata Tarantella de pollo crispy</span><a class="me-item-wa" target="_blank" rel="noopener" href="https://wa.me/584248445789?text=Hola%2C%20quisiera%20el%20Men%C3%BA%20Especial%20con%20Insalata%20Tarantella%20de%20pollo%20crispy"><svg width="14" height="14" viewBox="0 0 32 32" fill="currentColor"><path d="M16 0C7.163 0 0 7.163 0 16c0 2.823.736 5.47 2.02 7.773L0 32l8.47-2.003A15.94 15.94 0 0016 32c8.837 0 16-7.163 16-16S24.837 0 16 0zm8.03 22.21c-.34.956-1.98 1.83-2.72 1.948-.692.11-1.56.156-2.512-.158-.58-.19-1.327-.443-2.283-.868-4.01-1.734-6.63-5.81-6.83-6.08-.198-.27-1.62-2.157-1.62-4.115 0-1.957 1.026-2.92 1.39-3.316.365-.397.795-.497 1.06-.497.265 0 .53.003.762.014.244.012.572-.093.896.684.34.8 1.155 2.756 1.255 2.956.1.198.166.43.033.694-.133.264-.2.43-.397.66-.2.232-.42.517-.6.695-.198.198-.404.413-.174.81.23.397 1.02 1.683 2.19 2.726 1.505 1.343 2.774 1.757 3.17 1.955.398.2.63.167.864-.1.232-.265.993-1.16 1.258-1.557.265-.397.53-.33.895-.2.365.132 2.32 1.095 2.717 1.293.397.2.662.298.762.464.1.166.1.96-.24 1.917z"/></svg></a></li>
-              <li class="me-item"><span class="me-item-dot"></span><span>Insalata César con pollo</span><a class="me-item-wa" target="_blank" rel="noopener" href="https://wa.me/584248445789?text=Hola%2C%20quisiera%20el%20Men%C3%BA%20Especial%20con%20Insalata%20C%C3%A9sar%20con%20pollo"><svg width="14" height="14" viewBox="0 0 32 32" fill="currentColor"><path d="M16 0C7.163 0 0 7.163 0 16c0 2.823.736 5.47 2.02 7.773L0 32l8.47-2.003A15.94 15.94 0 0016 32c8.837 0 16-7.163 16-16S24.837 0 16 0zm8.03 22.21c-.34.956-1.98 1.83-2.72 1.948-.692.11-1.56.156-2.512-.158-.58-.19-1.327-.443-2.283-.868-4.01-1.734-6.63-5.81-6.83-6.08-.198-.27-1.62-2.157-1.62-4.115 0-1.957 1.026-2.92 1.39-3.316.365-.397.795-.497 1.06-.497.265 0 .53.003.762.014.244.012.572-.093.896.684.34.8 1.155 2.756 1.255 2.956.1.198.166.43.033.694-.133.264-.2.43-.397.66-.2.232-.42.517-.6.695-.198.198-.404.413-.174.81.23.397 1.02 1.683 2.19 2.726 1.505 1.343 2.774 1.757 3.17 1.955.398.2.63.167.864-.1.232-.265.993-1.16 1.258-1.557.265-.397.53-.33.895-.2.365.132 2.32 1.095 2.717 1.293.397.2.662.298.762.464.1.166.1.96-.24 1.917z"/></svg></a></li>
-              <li class="me-item"><span class="me-item-dot"></span><span>Risotto Funghi</span><a class="me-item-wa" target="_blank" rel="noopener" href="https://wa.me/584248445789?text=Hola%2C%20quisiera%20el%20Men%C3%BA%20Especial%20con%20Risotto%20Funghi"><svg width="14" height="14" viewBox="0 0 32 32" fill="currentColor"><path d="M16 0C7.163 0 0 7.163 0 16c0 2.823.736 5.47 2.02 7.773L0 32l8.47-2.003A15.94 15.94 0 0016 32c8.837 0 16-7.163 16-16S24.837 0 16 0zm8.03 22.21c-.34.956-1.98 1.83-2.72 1.948-.692.11-1.56.156-2.512-.158-.58-.19-1.327-.443-2.283-.868-4.01-1.734-6.63-5.81-6.83-6.08-.198-.27-1.62-2.157-1.62-4.115 0-1.957 1.026-2.92 1.39-3.316.365-.397.795-.497 1.06-.497.265 0 .53.003.762.014.244.012.572-.093.896.684.34.8 1.155 2.756 1.255 2.956.1.198.166.43.033.694-.133.264-.2.43-.397.66-.2.232-.42.517-.6.695-.198.198-.404.413-.174.81.23.397 1.02 1.683 2.19 2.726 1.505 1.343 2.774 1.757 3.17 1.955.398.2.63.167.864-.1.232-.265.993-1.16 1.258-1.557.265-.397.53-.33.895-.2.365.132 2.32 1.095 2.717 1.293.397.2.662.298.762.464.1.166.1.96-.24 1.917z"/></svg></a></li>
-              <li class="me-item"><span class="me-item-dot"></span><span>Pechuga de pollo parmigiana</span><a class="me-item-wa" target="_blank" rel="noopener" href="https://wa.me/584248445789?text=Hola%2C%20quisiera%20el%20Men%C3%BA%20Especial%20con%20Pechuga%20de%20pollo%20parmigiana"><svg width="14" height="14" viewBox="0 0 32 32" fill="currentColor"><path d="M16 0C7.163 0 0 7.163 0 16c0 2.823.736 5.47 2.02 7.773L0 32l8.47-2.003A15.94 15.94 0 0016 32c8.837 0 16-7.163 16-16S24.837 0 16 0zm8.03 22.21c-.34.956-1.98 1.83-2.72 1.948-.692.11-1.56.156-2.512-.158-.58-.19-1.327-.443-2.283-.868-4.01-1.734-6.63-5.81-6.83-6.08-.198-.27-1.62-2.157-1.62-4.115 0-1.957 1.026-2.92 1.39-3.316.365-.397.795-.497 1.06-.497.265 0 .53.003.762.014.244.012.572-.093.896.684.34.8 1.155 2.756 1.255 2.956.1.198.166.43.033.694-.133.264-.2.43-.397.66-.2.232-.42.517-.6.695-.198.198-.404.413-.174.81.23.397 1.02 1.683 2.19 2.726 1.505 1.343 2.774 1.757 3.17 1.955.398.2.63.167.864-.1.232-.265.993-1.16 1.258-1.557.265-.397.53-.33.895-.2.365.132 2.32 1.095 2.717 1.293.397.2.662.298.762.464.1.166.1.96-.24 1.917z"/></svg></a></li>
-              <li class="me-item"><span class="me-item-dot"></span><span>Pechuga de pollo al grill</span><a class="me-item-wa" target="_blank" rel="noopener" href="https://wa.me/584248445789?text=Hola%2C%20quisiera%20el%20Men%C3%BA%20Especial%20con%20Pechuga%20de%20pollo%20al%20grill"><svg width="14" height="14" viewBox="0 0 32 32" fill="currentColor"><path d="M16 0C7.163 0 0 7.163 0 16c0 2.823.736 5.47 2.02 7.773L0 32l8.47-2.003A15.94 15.94 0 0016 32c8.837 0 16-7.163 16-16S24.837 0 16 0zm8.03 22.21c-.34.956-1.98 1.83-2.72 1.948-.692.11-1.56.156-2.512-.158-.58-.19-1.327-.443-2.283-.868-4.01-1.734-6.63-5.81-6.83-6.08-.198-.27-1.62-2.157-1.62-4.115 0-1.957 1.026-2.92 1.39-3.316.365-.397.795-.497 1.06-.497.265 0 .53.003.762.014.244.012.572-.093.896.684.34.8 1.155 2.756 1.255 2.956.1.198.166.43.033.694-.133.264-.2.43-.397.66-.2.232-.42.517-.6.695-.198.198-.404.413-.174.81.23.397 1.02 1.683 2.19 2.726 1.505 1.343 2.774 1.757 3.17 1.955.398.2.63.167.864-.1.232-.265.993-1.16 1.258-1.557.265-.397.53-.33.895-.2.365.132 2.32 1.095 2.717 1.293.397.2.662.298.762.464.1.166.1.96-.24 1.917z"/></svg></a></li>
-              <li class="me-item"><span class="me-item-dot"></span><span>Strogonoff de pollo</span><a class="me-item-wa" target="_blank" rel="noopener" href="https://wa.me/584248445789?text=Hola%2C%20quisiera%20el%20Men%C3%BA%20Especial%20con%20Strogonoff%20de%20pollo"><svg width="14" height="14" viewBox="0 0 32 32" fill="currentColor"><path d="M16 0C7.163 0 0 7.163 0 16c0 2.823.736 5.47 2.02 7.773L0 32l8.47-2.003A15.94 15.94 0 0016 32c8.837 0 16-7.163 16-16S24.837 0 16 0zm8.03 22.21c-.34.956-1.98 1.83-2.72 1.948-.692.11-1.56.156-2.512-.158-.58-.19-1.327-.443-2.283-.868-4.01-1.734-6.63-5.81-6.83-6.08-.198-.27-1.62-2.157-1.62-4.115 0-1.957 1.026-2.92 1.39-3.316.365-.397.795-.497 1.06-.497.265 0 .53.003.762.014.244.012.572-.093.896.684.34.8 1.155 2.756 1.255 2.956.1.198.166.43.033.694-.133.264-.2.43-.397.66-.2.232-.42.517-.6.695-.198.198-.404.413-.174.81.23.397 1.02 1.683 2.19 2.726 1.505 1.343 2.774 1.757 3.17 1.955.398.2.63.167.864-.1.232-.265.993-1.16 1.258-1.557.265-.397.53-.33.895-.2.365.132 2.32 1.095 2.717 1.293.397.2.662.298.762.464.1.166.1.96-.24 1.917z"/></svg></a></li>
-              <li class="me-item"><span class="me-item-dot"></span><span>Strogonoff de carne</span><a class="me-item-wa" target="_blank" rel="noopener" href="https://wa.me/584248445789?text=Hola%2C%20quisiera%20el%20Men%C3%BA%20Especial%20con%20Strogonoff%20de%20carne"><svg width="14" height="14" viewBox="0 0 32 32" fill="currentColor"><path d="M16 0C7.163 0 0 7.163 0 16c0 2.823.736 5.47 2.02 7.773L0 32l8.47-2.003A15.94 15.94 0 0016 32c8.837 0 16-7.163 16-16S24.837 0 16 0zm8.03 22.21c-.34.956-1.98 1.83-2.72 1.948-.692.11-1.56.156-2.512-.158-.58-.19-1.327-.443-2.283-.868-4.01-1.734-6.63-5.81-6.83-6.08-.198-.27-1.62-2.157-1.62-4.115 0-1.957 1.026-2.92 1.39-3.316.365-.397.795-.497 1.06-.497.265 0 .53.003.762.014.244.012.572-.093.896.684.34.8 1.155 2.756 1.255 2.956.1.198.166.43.033.694-.133.264-.2.43-.397.66-.2.232-.42.517-.6.695-.198.198-.404.413-.174.81.23.397 1.02 1.683 2.19 2.726 1.505 1.343 2.774 1.757 3.17 1.955.398.2.63.167.864-.1.232-.265.993-1.16 1.258-1.557.265-.397.53-.33.895-.2.365.132 2.32 1.095 2.717 1.293.397.2.662.298.762.464.1.166.1.96-.24 1.917z"/></svg></a></li>
-              <li class="me-item"><span class="me-item-dot"></span><span>Tiras de carne salteadas</span><a class="me-item-wa" target="_blank" rel="noopener" href="https://wa.me/584248445789?text=Hola%2C%20quisiera%20el%20Men%C3%BA%20Especial%20con%20Tiras%20de%20carne%20salteadas"><svg width="14" height="14" viewBox="0 0 32 32" fill="currentColor"><path d="M16 0C7.163 0 0 7.163 0 16c0 2.823.736 5.47 2.02 7.773L0 32l8.47-2.003A15.94 15.94 0 0016 32c8.837 0 16-7.163 16-16S24.837 0 16 0zm8.03 22.21c-.34.956-1.98 1.83-2.72 1.948-.692.11-1.56.156-2.512-.158-.58-.19-1.327-.443-2.283-.868-4.01-1.734-6.63-5.81-6.83-6.08-.198-.27-1.62-2.157-1.62-4.115 0-1.957 1.026-2.92 1.39-3.316.365-.397.795-.497 1.06-.497.265 0 .53.003.762.014.244.012.572-.093.896.684.34.8 1.155 2.756 1.255 2.956.1.198.166.43.033.694-.133.264-.2.43-.397.66-.2.232-.42.517-.6.695-.198.198-.404.413-.174.81.23.397 1.02 1.683 2.19 2.726 1.505 1.343 2.774 1.757 3.17 1.955.398.2.63.167.864-.1.232-.265.993-1.16 1.258-1.557.265-.397.53-.33.895-.2.365.132 2.32 1.095 2.717 1.293.397.2.662.298.762.464.1.166.1.96-.24 1.917z"/></svg></a></li>
-              <li class="me-item"><span class="me-item-dot"></span><span>Hamburguesa de carne</span><a class="me-item-wa" target="_blank" rel="noopener" href="https://wa.me/584248445789?text=Hola%2C%20quisiera%20el%20Men%C3%BA%20Especial%20con%20Hamburguesa%20de%20carne"><svg width="14" height="14" viewBox="0 0 32 32" fill="currentColor"><path d="M16 0C7.163 0 0 7.163 0 16c0 2.823.736 5.47 2.02 7.773L0 32l8.47-2.003A15.94 15.94 0 0016 32c8.837 0 16-7.163 16-16S24.837 0 16 0zm8.03 22.21c-.34.956-1.98 1.83-2.72 1.948-.692.11-1.56.156-2.512-.158-.58-.19-1.327-.443-2.283-.868-4.01-1.734-6.63-5.81-6.83-6.08-.198-.27-1.62-2.157-1.62-4.115 0-1.957 1.026-2.92 1.39-3.316.365-.397.795-.497 1.06-.497.265 0 .53.003.762.014.244.012.572-.093.896.684.34.8 1.155 2.756 1.255 2.956.1.198.166.43.033.694-.133.264-.2.43-.397.66-.2.232-.42.517-.6.695-.198.198-.404.413-.174.81.23.397 1.02 1.683 2.19 2.726 1.505 1.343 2.774 1.757 3.17 1.955.398.2.63.167.864-.1.232-.265.993-1.16 1.258-1.557.265-.397.53-.33.895-.2.365.132 2.32 1.095 2.717 1.293.397.2.662.298.762.464.1.166.1.96-.24 1.917z"/></svg></a></li>
-              <li class="me-item"><span class="me-item-dot"></span><span>Hamburguesa de pollo crispy</span><a class="me-item-wa" target="_blank" rel="noopener" href="https://wa.me/584248445789?text=Hola%2C%20quisiera%20el%20Men%C3%BA%20Especial%20con%20Hamburguesa%20de%20pollo%20crispy"><svg width="14" height="14" viewBox="0 0 32 32" fill="currentColor"><path d="M16 0C7.163 0 0 7.163 0 16c0 2.823.736 5.47 2.02 7.773L0 32l8.47-2.003A15.94 15.94 0 0016 32c8.837 0 16-7.163 16-16S24.837 0 16 0zm8.03 22.21c-.34.956-1.98 1.83-2.72 1.948-.692.11-1.56.156-2.512-.158-.58-.19-1.327-.443-2.283-.868-4.01-1.734-6.63-5.81-6.83-6.08-.198-.27-1.62-2.157-1.62-4.115 0-1.957 1.026-2.92 1.39-3.316.365-.397.795-.497 1.06-.497.265 0 .53.003.762.014.244.012.572-.093.896.684.34.8 1.155 2.756 1.255 2.956.1.198.166.43.033.694-.133.264-.2.43-.397.66-.2.232-.42.517-.6.695-.198.198-.404.413-.174.81.23.397 1.02 1.683 2.19 2.726 1.505 1.343 2.774 1.757 3.17 1.955.398.2.63.167.864-.1.232-.265.993-1.16 1.258-1.557.265-.397.53-.33.895-.2.365.132 2.32 1.095 2.717 1.293.397.2.662.298.762.464.1.166.1.96-.24 1.917z"/></svg></a></li>
-              <li class="me-item"><span class="me-item-dot"></span><span>Club house</span><a class="me-item-wa" target="_blank" rel="noopener" href="https://wa.me/584248445789?text=Hola%2C%20quisiera%20el%20Men%C3%BA%20Especial%20con%20Club%20house"><svg width="14" height="14" viewBox="0 0 32 32" fill="currentColor"><path d="M16 0C7.163 0 0 7.163 0 16c0 2.823.736 5.47 2.02 7.773L0 32l8.47-2.003A15.94 15.94 0 0016 32c8.837 0 16-7.163 16-16S24.837 0 16 0zm8.03 22.21c-.34.956-1.98 1.83-2.72 1.948-.692.11-1.56.156-2.512-.158-.58-.19-1.327-.443-2.283-.868-4.01-1.734-6.63-5.81-6.83-6.08-.198-.27-1.62-2.157-1.62-4.115 0-1.957 1.026-2.92 1.39-3.316.365-.397.795-.497 1.06-.497.265 0 .53.003.762.014.244.012.572-.093.896.684.34.8 1.155 2.756 1.255 2.956.1.198.166.43.033.694-.133.264-.2.43-.397.66-.2.232-.42.517-.6.695-.198.198-.404.413-.174.81.23.397 1.02 1.683 2.19 2.726 1.505 1.343 2.774 1.757 3.17 1.955.398.2.63.167.864-.1.232-.265.993-1.16 1.258-1.557.265-.397.53-.33.895-.2.365.132 2.32 1.095 2.717 1.293.397.2.662.298.762.464.1.166.1.96-.24 1.917z"/></svg></a></li>
-              <li class="me-item"><span class="me-item-dot"></span><span>Nuggets de pollo</span><a class="me-item-wa" target="_blank" rel="noopener" href="https://wa.me/584248445789?text=Hola%2C%20quisiera%20el%20Men%C3%BA%20Especial%20con%20Nuggets%20de%20pollo"><svg width="14" height="14" viewBox="0 0 32 32" fill="currentColor"><path d="M16 0C7.163 0 0 7.163 0 16c0 2.823.736 5.47 2.02 7.773L0 32l8.47-2.003A15.94 15.94 0 0016 32c8.837 0 16-7.163 16-16S24.837 0 16 0zm8.03 22.21c-.34.956-1.98 1.83-2.72 1.948-.692.11-1.56.156-2.512-.158-.58-.19-1.327-.443-2.283-.868-4.01-1.734-6.63-5.81-6.83-6.08-.198-.27-1.62-2.157-1.62-4.115 0-1.957 1.026-2.92 1.39-3.316.365-.397.795-.497 1.06-.497.265 0 .53.003.762.014.244.012.572-.093.896.684.34.8 1.155 2.756 1.255 2.956.1.198.166.43.033.694-.133.264-.2.43-.397.66-.2.232-.42.517-.6.695-.198.198-.404.413-.174.81.23.397 1.02 1.683 2.19 2.726 1.505 1.343 2.774 1.757 3.17 1.955.398.2.63.167.864-.1.232-.265.993-1.16 1.258-1.557.265-.397.53-.33.895-.2.365.132 2.32 1.095 2.717 1.293.397.2.662.298.762.464.1.166.1.96-.24 1.917z"/></svg></a></li>
-            </ul>
+
+            <div class="me-cards-list">
+              <label class="me-dish-card">
+                <input type="checkbox" name="entrada" value="Focaccia con hummus de berenjena y aceitunas" class="me-checkbox-input" />
+                <span class="me-checkbox-box" aria-hidden="true"></span>
+                <div class="me-card-details">
+                  <span class="me-card-name">Focaccia con hummus de berenjena y aceitunas</span>
+                  <span class="me-card-desc">Servida fresca para dar inicio a tu experiencia gastronómica</span>
+                </div>
+              </label>
+            </div>
           </div>
 
-          <!-- Postres -->
-          <div class="me-cat">
-            <div class="me-cat-header">
-              <span class="me-cat-num">03</span>
-              <div>
-                <p class="me-cat-label">A elegir uno</p>
-                <h3 class="me-cat-title">Postres</h3>
+          <!-- Disposición en columnas en desktop / apilado vertical fluido en mobile -->
+          <div class="me-columns-layout">
+
+            <!-- Columna Izquierda: 02 Platos Fuertes -->
+            <div class="me-col-left">
+              <div class="me-cat-block" id="cat-platos">
+                <div class="me-cat-header">
+                  <div class="me-cat-heading-group">
+                    <span class="me-cat-icon">🍝</span>
+                    <h3 class="me-cat-title">Platos Fuertes</h3>
+                  </div>
+                  <div class="me-cat-status-badge">
+                    <span class="me-badge-optional" id="badge-plato-status">Opcional</span>
+                  </div>
+                </div>
+
+                <div class="me-cards-grid me-cards-grid--platos">
+                  <label class="me-dish-card">
+                    <input type="radio" name="plato_fuerte" value="Linguine Primavera con pollo" class="me-radio-input" />
+                    <span class="me-radio-circle" aria-hidden="true"></span>
+                    <span class="me-card-name">Linguine Primavera con pollo</span>
+                  </label>
+
+                  <label class="me-dish-card">
+                    <input type="radio" name="plato_fuerte" value="Linguine Alfredo con pollo" class="me-radio-input" />
+                    <span class="me-radio-circle" aria-hidden="true"></span>
+                    <span class="me-card-name">Linguine Alfredo con pollo</span>
+                  </label>
+
+                  <label class="me-dish-card">
+                    <input type="radio" name="plato_fuerte" value="Linguine Bologna" class="me-radio-input" />
+                    <span class="me-radio-circle" aria-hidden="true"></span>
+                    <span class="me-card-name">Linguine Bologna</span>
+                  </label>
+
+                  <label class="me-dish-card">
+                    <input type="radio" name="plato_fuerte" value="Linguine Filetto Bettina" class="me-radio-input" />
+                    <span class="me-radio-circle" aria-hidden="true"></span>
+                    <span class="me-card-name">Linguine Filetto Bettina</span>
+                  </label>
+
+                  <label class="me-dish-card">
+                    <input type="radio" name="plato_fuerte" value="Trío de Pastas Sinaí" class="me-radio-input" />
+                    <span class="me-radio-circle" aria-hidden="true"></span>
+                    <span class="me-card-name">Trío de Pastas Sinaí</span>
+                  </label>
+
+                  <label class="me-dish-card">
+                    <input type="radio" name="plato_fuerte" value="Raviolis de ricota y espinaca" class="me-radio-input" />
+                    <span class="me-radio-circle" aria-hidden="true"></span>
+                    <span class="me-card-name">Raviolis de ricota y espinaca</span>
+                  </label>
+
+                  <label class="me-dish-card">
+                    <input type="radio" name="plato_fuerte" value="Raviolis de carne" class="me-radio-input" />
+                    <span class="me-radio-circle" aria-hidden="true"></span>
+                    <span class="me-card-name">Raviolis de carne</span>
+                  </label>
+
+                  <label class="me-dish-card">
+                    <input type="radio" name="plato_fuerte" value="Insalata Tarantella de pollo crispy" class="me-radio-input" />
+                    <span class="me-radio-circle" aria-hidden="true"></span>
+                    <span class="me-card-name">Insalata Tarantella de pollo crispy</span>
+                  </label>
+
+                  <label class="me-dish-card">
+                    <input type="radio" name="plato_fuerte" value="Insalata César con pollo" class="me-radio-input" />
+                    <span class="me-radio-circle" aria-hidden="true"></span>
+                    <span class="me-card-name">Insalata César con pollo</span>
+                  </label>
+
+                  <label class="me-dish-card">
+                    <input type="radio" name="plato_fuerte" value="Risotto Funghi" class="me-radio-input" />
+                    <span class="me-radio-circle" aria-hidden="true"></span>
+                    <span class="me-card-name">Risotto Funghi</span>
+                  </label>
+
+                  <label class="me-dish-card">
+                    <input type="radio" name="plato_fuerte" value="Pechuga de pollo parmigiana" class="me-radio-input" />
+                    <span class="me-radio-circle" aria-hidden="true"></span>
+                    <span class="me-card-name">Pechuga de pollo parmigiana</span>
+                  </label>
+
+                  <label class="me-dish-card">
+                    <input type="radio" name="plato_fuerte" value="Pechuga de pollo al grill" class="me-radio-input" />
+                    <span class="me-radio-circle" aria-hidden="true"></span>
+                    <span class="me-card-name">Pechuga de pollo al grill</span>
+                  </label>
+
+                  <label class="me-dish-card">
+                    <input type="radio" name="plato_fuerte" value="Strogonoff de pollo" class="me-radio-input" />
+                    <span class="me-radio-circle" aria-hidden="true"></span>
+                    <span class="me-card-name">Strogonoff de pollo</span>
+                  </label>
+
+                  <label class="me-dish-card">
+                    <input type="radio" name="plato_fuerte" value="Strogonoff de carne" class="me-radio-input" />
+                    <span class="me-radio-circle" aria-hidden="true"></span>
+                    <span class="me-card-name">Strogonoff de carne</span>
+                  </label>
+
+                  <label class="me-dish-card">
+                    <input type="radio" name="plato_fuerte" value="Tiras de carne salteadas" class="me-radio-input" />
+                    <span class="me-radio-circle" aria-hidden="true"></span>
+                    <span class="me-card-name">Tiras de carne salteadas</span>
+                  </label>
+
+                  <label class="me-dish-card">
+                    <input type="radio" name="plato_fuerte" value="Hamburguesa de carne" class="me-radio-input" />
+                    <span class="me-radio-circle" aria-hidden="true"></span>
+                    <span class="me-card-name">Hamburguesa de carne</span>
+                  </label>
+
+                  <label class="me-dish-card">
+                    <input type="radio" name="plato_fuerte" value="Hamburguesa de pollo crispy" class="me-radio-input" />
+                    <span class="me-radio-circle" aria-hidden="true"></span>
+                    <span class="me-card-name">Hamburguesa de pollo crispy</span>
+                  </label>
+
+                  <label class="me-dish-card">
+                    <input type="radio" name="plato_fuerte" value="Club house" class="me-radio-input" />
+                    <span class="me-radio-circle" aria-hidden="true"></span>
+                    <span class="me-card-name">Club house</span>
+                  </label>
+
+                  <label class="me-dish-card">
+                    <input type="radio" name="plato_fuerte" value="Nuggets de pollo" class="me-radio-input" />
+                    <span class="me-radio-circle" aria-hidden="true"></span>
+                    <span class="me-card-name">Nuggets de pollo</span>
+                  </label>
+                </div>
               </div>
-              <span class="me-cat-icon">🍮</span>
             </div>
-            <ul class="me-items">
-              <li class="me-item"><span class="me-item-dot"></span><span>Pie de Limón</span><a class="me-item-wa" target="_blank" rel="noopener" href="https://wa.me/584248445789?text=Hola%2C%20quisiera%20el%20Men%C3%BA%20Especial%20con%20Pie%20de%20Lim%C3%B3n%20de%20postre"><svg width="14" height="14" viewBox="0 0 32 32" fill="currentColor"><path d="M16 0C7.163 0 0 7.163 0 16c0 2.823.736 5.47 2.02 7.773L0 32l8.47-2.003A15.94 15.94 0 0016 32c8.837 0 16-7.163 16-16S24.837 0 16 0zm8.03 22.21c-.34.956-1.98 1.83-2.72 1.948-.692.11-1.56.156-2.512-.158-.58-.19-1.327-.443-2.283-.868-4.01-1.734-6.63-5.81-6.83-6.08-.198-.27-1.62-2.157-1.62-4.115 0-1.957 1.026-2.92 1.39-3.316.365-.397.795-.497 1.06-.497.265 0 .53.003.762.014.244.012.572-.093.896.684.34.8 1.155 2.756 1.255 2.956.1.198.166.43.033.694-.133.264-.2.43-.397.66-.2.232-.42.517-.6.695-.198.198-.404.413-.174.81.23.397 1.02 1.683 2.19 2.726 1.505 1.343 2.774 1.757 3.17 1.955.398.2.63.167.864-.1.232-.265.993-1.16 1.258-1.557.265-.397.53-.33.895-.2.365.132 2.32 1.095 2.717 1.293.397.2.662.298.762.464.1.166.1.96-.24 1.917z"/></svg></a></li>
-              <li class="me-item"><span class="me-item-dot"></span><span>Pie de Parchita</span><a class="me-item-wa" target="_blank" rel="noopener" href="https://wa.me/584248445789?text=Hola%2C%20quisiera%20el%20Men%C3%BA%20Especial%20con%20Pie%20de%20Parchita%20de%20postre"><svg width="14" height="14" viewBox="0 0 32 32" fill="currentColor"><path d="M16 0C7.163 0 0 7.163 0 16c0 2.823.736 5.47 2.02 7.773L0 32l8.47-2.003A15.94 15.94 0 0016 32c8.837 0 16-7.163 16-16S24.837 0 16 0zm8.03 22.21c-.34.956-1.98 1.83-2.72 1.948-.692.11-1.56.156-2.512-.158-.58-.19-1.327-.443-2.283-.868-4.01-1.734-6.63-5.81-6.83-6.08-.198-.27-1.62-2.157-1.62-4.115 0-1.957 1.026-2.92 1.39-3.316.365-.397.795-.497 1.06-.497.265 0 .53.003.762.014.244.012.572-.093.896.684.34.8 1.155 2.756 1.255 2.956.1.198.166.43.033.694-.133.264-.2.43-.397.66-.2.232-.42.517-.6.695-.198.198-.404.413-.174.81.23.397 1.02 1.683 2.19 2.726 1.505 1.343 2.774 1.757 3.17 1.955.398.2.63.167.864-.1.232-.265.993-1.16 1.258-1.557.265-.397.53-.33.895-.2.365.132 2.32 1.095 2.717 1.293.397.2.662.298.762.464.1.166.1.96-.24 1.917z"/></svg></a></li>
-              <li class="me-item"><span class="me-item-dot"></span><span>Torta Tres Leches</span><a class="me-item-wa" target="_blank" rel="noopener" href="https://wa.me/584248445789?text=Hola%2C%20quisiera%20el%20Men%C3%BA%20Especial%20con%20Torta%20Tres%20Leches%20de%20postre"><svg width="14" height="14" viewBox="0 0 32 32" fill="currentColor"><path d="M16 0C7.163 0 0 7.163 0 16c0 2.823.736 5.47 2.02 7.773L0 32l8.47-2.003A15.94 15.94 0 0016 32c8.837 0 16-7.163 16-16S24.837 0 16 0zm8.03 22.21c-.34.956-1.98 1.83-2.72 1.948-.692.11-1.56.156-2.512-.158-.58-.19-1.327-.443-2.283-.868-4.01-1.734-6.63-5.81-6.83-6.08-.198-.27-1.62-2.157-1.62-4.115 0-1.957 1.026-2.92 1.39-3.316.365-.397.795-.497 1.06-.497.265 0 .53.003.762.014.244.012.572-.093.896.684.34.8 1.155 2.756 1.255 2.956.1.198.166.43.033.694-.133.264-.2.43-.397.66-.2.232-.42.517-.6.695-.198.198-.404.413-.174.81.23.397 1.02 1.683 2.19 2.726 1.505 1.343 2.774 1.757 3.17 1.955.398.2.63.167.864-.1.232-.265.993-1.16 1.258-1.557.265-.397.53-.33.895-.2.365.132 2.32 1.095 2.717 1.293.397.2.662.298.762.464.1.166.1.96-.24 1.917z"/></svg></a></li>
-              <li class="me-item"><span class="me-item-dot"></span><span>Helados varios</span><a class="me-item-wa" target="_blank" rel="noopener" href="https://wa.me/584248445789?text=Hola%2C%20quisiera%20el%20Men%C3%BA%20Especial%20con%20Helados%20varios%20de%20postre"><svg width="14" height="14" viewBox="0 0 32 32" fill="currentColor"><path d="M16 0C7.163 0 0 7.163 0 16c0 2.823.736 5.47 2.02 7.773L0 32l8.47-2.003A15.94 15.94 0 0016 32c8.837 0 16-7.163 16-16S24.837 0 16 0zm8.03 22.21c-.34.956-1.98 1.83-2.72 1.948-.692.11-1.56.156-2.512-.158-.58-.19-1.327-.443-2.283-.868-4.01-1.734-6.63-5.81-6.83-6.08-.198-.27-1.62-2.157-1.62-4.115 0-1.957 1.026-2.92 1.39-3.316.365-.397.795-.497 1.06-.497.265 0 .53.003.762.014.244.012.572-.093.896.684.34.8 1.155 2.756 1.255 2.956.1.198.166.43.033.694-.133.264-.2.43-.397.66-.2.232-.42.517-.6.695-.198.198-.404.413-.174.81.23.397 1.02 1.683 2.19 2.726 1.505 1.343 2.774 1.757 3.17 1.955.398.2.63.167.864-.1.232-.265.993-1.16 1.258-1.557.265-.397.53-.33.895-.2.365.132 2.32 1.095 2.717 1.293.397.2.662.298.762.464.1.166.1.96-.24 1.917z"/></svg></a></li>
-            </ul>
-          </div>
 
-          <!-- Bebidas -->
-          <div class="me-cat">
-            <div class="me-cat-header">
-              <span class="me-cat-num">04</span>
-              <div>
-                <p class="me-cat-label">A elegir uno</p>
-                <h3 class="me-cat-title">Bebidas</h3>
+            <!-- Columna Derecha: 03 Postres & 04 Bebidas -->
+            <div class="me-col-right">
+
+              <!-- 03 Postres -->
+              <div class="me-cat-block" id="cat-postres">
+<div class="me-cat-header">
+                    <div class="me-cat-heading-group">
+                      <span class="me-cat-icon">🍮</span>
+                      <h3 class="me-cat-title">Postres</h3>
+                    </div>
+                    <div class="me-cat-status-badge">
+                      <span class="me-badge-optional" id="badge-postre-status">Opcional</span>
+                    </div>
+                  </div>
+
+                <div class="me-cards-list">
+                  <label class="me-dish-card">
+                    <input type="radio" name="postre" value="Pie de Limón" class="me-radio-input" />
+                    <span class="me-radio-circle" aria-hidden="true"></span>
+                    <span class="me-card-name">Pie de Limón</span>
+                  </label>
+
+                  <label class="me-dish-card">
+                    <input type="radio" name="postre" value="Pie de Parchita" class="me-radio-input" />
+                    <span class="me-radio-circle" aria-hidden="true"></span>
+                    <span class="me-card-name">Pie de Parchita</span>
+                  </label>
+
+                  <label class="me-dish-card">
+                    <input type="radio" name="postre" value="Torta Tres Leches" class="me-radio-input" />
+                    <span class="me-radio-circle" aria-hidden="true"></span>
+                    <span class="me-card-name">Torta Tres Leches</span>
+                  </label>
+
+                  <label class="me-dish-card">
+                    <input type="radio" name="postre" value="Helados varios" class="me-radio-input" />
+                    <span class="me-radio-circle" aria-hidden="true"></span>
+                    <span class="me-card-name">Helados varios</span>
+                  </label>
+                </div>
               </div>
-              <span class="me-cat-icon">🥤</span>
-            </div>
-            <ul class="me-items">
-              <li class="me-item"><span class="me-item-dot"></span><span>Limonada</span><a class="me-item-wa" target="_blank" rel="noopener" href="https://wa.me/584248445789?text=Hola%2C%20quisiera%20el%20Men%C3%BA%20Especial%20con%20Limonada%20de%20bebida"><svg width="14" height="14" viewBox="0 0 32 32" fill="currentColor"><path d="M16 0C7.163 0 0 7.163 0 16c0 2.823.736 5.47 2.02 7.773L0 32l8.47-2.003A15.94 15.94 0 0016 32c8.837 0 16-7.163 16-16S24.837 0 16 0zm8.03 22.21c-.34.956-1.98 1.83-2.72 1.948-.692.11-1.56.156-2.512-.158-.58-.19-1.327-.443-2.283-.868-4.01-1.734-6.63-5.81-6.83-6.08-.198-.27-1.62-2.157-1.62-4.115 0-1.957 1.026-2.92 1.39-3.316.365-.397.795-.497 1.06-.497.265 0 .53.003.762.014.244.012.572-.093.896.684.34.8 1.155 2.756 1.255 2.956.1.198.166.43.033.694-.133.264-.2.43-.397.66-.2.232-.42.517-.6.695-.198.198-.404.413-.174.81.23.397 1.02 1.683 2.19 2.726 1.505 1.343 2.774 1.757 3.17 1.955.398.2.63.167.864-.1.232-.265.993-1.16 1.258-1.557.265-.397.53-.33.895-.2.365.132 2.32 1.095 2.717 1.293.397.2.662.298.762.464.1.166.1.96-.24 1.917z"/></svg></a></li>
-              <li class="me-item"><span class="me-item-dot"></span><span>Té frío de la casa</span><a class="me-item-wa" target="_blank" rel="noopener" href="https://wa.me/584248445789?text=Hola%2C%20quisiera%20el%20Men%C3%BA%20Especial%20con%20T%C3%A9%20fr%C3%ADo%20de%20la%20casa%20de%20bebida"><svg width="14" height="14" viewBox="0 0 32 32" fill="currentColor"><path d="M16 0C7.163 0 0 7.163 0 16c0 2.823.736 5.47 2.02 7.773L0 32l8.47-2.003A15.94 15.94 0 0016 32c8.837 0 16-7.163 16-16S24.837 0 16 0zm8.03 22.21c-.34.956-1.98 1.83-2.72 1.948-.692.11-1.56.156-2.512-.158-.58-.19-1.327-.443-2.283-.868-4.01-1.734-6.63-5.81-6.83-6.08-.198-.27-1.62-2.157-1.62-4.115 0-1.957 1.026-2.92 1.39-3.316.365-.397.795-.497 1.06-.497.265 0 .53.003.762.014.244.012.572-.093.896.684.34.8 1.155 2.756 1.255 2.956.1.198.166.43.033.694-.133.264-.2.43-.397.66-.2.232-.42.517-.6.695-.198.198-.404.413-.174.81.23.397 1.02 1.683 2.19 2.726 1.505 1.343 2.774 1.757 3.17 1.955.398.2.63.167.864-.1.232-.265.993-1.16 1.258-1.557.265-.397.53-.33.895-.2.365.132 2.32 1.095 2.717 1.293.397.2.662.298.762.464.1.166.1.96-.24 1.917z"/></svg></a></li>
-              <li class="me-item"><span class="me-item-dot"></span><span>Jugos naturales</span><a class="me-item-wa" target="_blank" rel="noopener" href="https://wa.me/584248445789?text=Hola%2C%20quisiera%20el%20Men%C3%BA%20Especial%20con%20Jugos%20naturales%20de%20bebida"><svg width="14" height="14" viewBox="0 0 32 32" fill="currentColor"><path d="M16 0C7.163 0 0 7.163 0 16c0 2.823.736 5.47 2.02 7.773L0 32l8.47-2.003A15.94 15.94 0 0016 32c8.837 0 16-7.163 16-16S24.837 0 16 0zm8.03 22.21c-.34.956-1.98 1.83-2.72 1.948-.692.11-1.56.156-2.512-.158-.58-.19-1.327-.443-2.283-.868-4.01-1.734-6.63-5.81-6.83-6.08-.198-.27-1.62-2.157-1.62-4.115 0-1.957 1.026-2.92 1.39-3.316.365-.397.795-.497 1.06-.497.265 0 .53.003.762.014.244.012.572-.093.896.684.34.8 1.155 2.756 1.255 2.956.1.198.166.43.033.694-.133.264-.2.43-.397.66-.2.232-.42.517-.6.695-.198.198-.404.413-.174.81.23.397 1.02 1.683 2.19 2.726 1.505 1.343 2.774 1.757 3.17 1.955.398.2.63.167.864-.1.232-.265.993-1.16 1.258-1.557.265-.397.53-.33.895-.2.365.132 2.32 1.095 2.717 1.293.397.2.662.298.762.464.1.166.1.96-.24 1.917z"/></svg></a></li>
-              <li class="me-item"><span class="me-item-dot"></span><span>Refrescos</span><a class="me-item-wa" target="_blank" rel="noopener" href="https://wa.me/584248445789?text=Hola%2C%20quisiera%20el%20Men%C3%BA%20Especial%20con%20Refrescos%20de%20bebida"><svg width="14" height="14" viewBox="0 0 32 32" fill="currentColor"><path d="M16 0C7.163 0 0 7.163 0 16c0 2.823.736 5.47 2.02 7.773L0 32l8.47-2.003A15.94 15.94 0 0016 32c8.837 0 16-7.163 16-16S24.837 0 16 0zm8.03 22.21c-.34.956-1.98 1.83-2.72 1.948-.692.11-1.56.156-2.512-.158-.58-.19-1.327-.443-2.283-.868-4.01-1.734-6.63-5.81-6.83-6.08-.198-.27-1.62-2.157-1.62-4.115 0-1.957 1.026-2.92 1.39-3.316.365-.397.795-.497 1.06-.497.265 0 .53.003.762.014.244.012.572-.093.896.684.34.8 1.155 2.756 1.255 2.956.1.198.166.43.033.694-.133.264-.2.43-.397.66-.2.232-.42.517-.6.695-.198.198-.404.413-.174.81.23.397 1.02 1.683 2.19 2.726 1.505 1.343 2.774 1.757 3.17 1.955.398.2.63.167.864-.1.232-.265.993-1.16 1.258-1.557.265-.397.53-.33.895-.2.365.132 2.32 1.095 2.717 1.293.397.2.662.298.762.464.1.166.1.96-.24 1.917z"/></svg></a></li>
-            </ul>
-          </div>
 
-        </div><!-- /me-categories -->
+              <!-- 04 Bebidas -->
+              <div class="me-cat-block" id="cat-bebidas">
+                <div class="me-cat-header">
+                  <div class="me-cat-heading-group">
+                    <span class="me-cat-icon">🥤</span>
+                    <h3 class="me-cat-title">Bebidas</h3>
+                  </div>
+                  <div class="me-cat-status-badge">
+                    <span class="me-badge-required" id="badge-bebida-status">A ELEGIR UNO</span>
+                  </div>
+                </div>
 
-        <!-- CTA final -->
+                <div class="me-cards-list">
+                  <label class="me-dish-card">
+                    <input type="radio" name="bebida" value="Limonada" class="me-radio-input" />
+                    <span class="me-radio-circle" aria-hidden="true"></span>
+                    <span class="me-card-name">Limonada</span>
+                  </label>
+
+                  <label class="me-dish-card">
+                    <input type="radio" name="bebida" value="Té frío de la casa" class="me-radio-input" />
+                    <span class="me-radio-circle" aria-hidden="true"></span>
+                    <span class="me-card-name">Té frío de la casa</span>
+                  </label>
+
+                  <label class="me-dish-card">
+                    <input type="radio" name="bebida" value="Jugos naturales" class="me-radio-input" />
+                    <span class="me-radio-circle" aria-hidden="true"></span>
+                    <span class="me-card-name">Jugos naturales</span>
+                  </label>
+
+                  <label class="me-dish-card">
+                    <input type="radio" name="bebida" value="Refrescos" class="me-radio-input" />
+                    <span class="me-radio-circle" aria-hidden="true"></span>
+                    <span class="me-card-name">Refrescos</span>
+                  </label>
+                </div>
+              </div>
+
+            </div><!-- /me-col-right -->
+
+          </div><!-- /me-columns-layout -->
+
+        </div><!-- /me-interactive-menu -->
+
+        <!-- CTA final dentro de la sección -->
         <div class="me-footer reveal">
-          <p>¿Listo para disfrutar? Reserva tu mesa ahora</p>
-          <a class="me-wa-btn me-wa-btn--lg" target="_blank" rel="noopener"
-             href="https://wa.me/584248445789?text=Hola%2C%20quisiera%20reservar%20el%20Men%C3%BA%20Especial%20Olivetta">
+          <div class="me-footer-status-box">
+            <p class="me-footer-title">Resumen de tu pedido:</p>
+            <div class="me-footer-summary-pills">
+              <span class="me-summary-pill" id="footer-summary-entrada">🫒 Entrada: <em>Sin seleccionar</em></span>
+              <span class="me-summary-pill" id="footer-summary-plato">🍝 Plato: <em>Sin seleccionar</em></span>
+              <span class="me-summary-pill" id="footer-summary-postre">🍮 Postre: <em>Sin seleccionar</em></span>
+              <span class="me-summary-pill" id="footer-summary-bebida">🥤 Bebida: <em>Sin seleccionar</em></span>
+            </div>
+          </div>
+          <a class="me-wa-btn me-wa-btn--lg is-disabled" id="me-footer-wa" target="_blank" rel="noopener"
+             href="#" role="button" aria-disabled="true">
             <svg width="20" height="20" viewBox="0 0 32 32" fill="currentColor"><path d="M16 0C7.163 0 0 7.163 0 16c0 2.823.736 5.47 2.02 7.773L0 32l8.47-2.003A15.94 15.94 0 0016 32c8.837 0 16-7.163 16-16S24.837 0 16 0zm8.03 22.21c-.34.956-1.98 1.83-2.72 1.948-.692.11-1.56.156-2.512-.158-.58-.19-1.327-.443-2.283-.868-4.01-1.734-6.63-5.81-6.83-6.08-.198-.27-1.62-2.157-1.62-4.115 0-1.957 1.026-2.92 1.39-3.316.365-.397.795-.497 1.06-.497.265 0 .53.003.762.014.244.012.572-.093.896.684.34.8 1.155 2.756 1.255 2.956.1.198.166.43.033.694-.133.264-.2.43-.397.66-.2.232-.42.517-.6.695-.198.198-.404.413-.174.81.23.397 1.02 1.683 2.19 2.726 1.505 1.343 2.774 1.757 3.17 1.955.398.2.63.167.864-.1.232-.265.993-1.16 1.258-1.557.265-.397.53-.33.895-.2.365.132 2.32 1.095 2.717 1.293.397.2.662.298.762.464.1.166.1.96-.24 1.917z"/></svg>
-            Reservar Menú Especial — Ref 14,99
+            <span id="me-footer-btn-text">Selecciona al menos un ítem para pedir</span>
           </a>
-          <p class="me-footer-note">📞 Reservaciones: 0424-844-5789</p>
+          <p class="me-footer-note">📞 Pedidos directos: 0424-844-5789 &middot; Olivetta Ristorante</p>
         </div>
 
       </div>
     </section>
+
+    <!-- BARRA STICKY INFERIOR CON RESUMEN Y WHATSAPP -->
+    <aside class="me-sticky-bar" id="me-sticky-bar" aria-label="Resumen de tu pedido">
+      <div class="container me-sticky-content">
+        <div class="me-sticky-info">
+          <div class="me-sticky-price-tag">
+            <span class="me-sticky-price-label">Tu pedido</span>
+            <span class="me-sticky-price-value">Precio por ítem</span>
+          </div>
+          <div class="me-sticky-selections">
+            <div class="me-sticky-sel-item is-empty" id="sticky-sel-entrada">
+              <span class="me-sticky-sel-icon">🫒</span>
+              <span class="me-sticky-sel-text" id="sticky-val-entrada">Selecciona tu entrada</span>
+            </div>
+            <div class="me-sticky-sel-item is-empty" id="sticky-sel-plato">
+              <span class="me-sticky-sel-icon">🍝</span>
+              <span class="me-sticky-sel-text" id="sticky-val-plato">Selecciona tu plato</span>
+            </div>
+            <div class="me-sticky-sel-item is-empty" id="sticky-sel-postre">
+              <span class="me-sticky-sel-icon">🍮</span>
+              <span class="me-sticky-sel-text" id="sticky-val-postre">Selecciona tu postre</span>
+            </div>
+            <div class="me-sticky-sel-item is-empty" id="sticky-sel-bebida">
+              <span class="me-sticky-sel-icon">🥤</span>
+              <span class="me-sticky-sel-text" id="sticky-val-bebida">Selecciona tu bebida</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="me-sticky-action">
+          <a class="me-wa-btn me-sticky-wa-btn is-disabled" id="me-sticky-wa" target="_blank" rel="noopener"
+             href="#" role="button" aria-disabled="true">
+            <svg width="20" height="20" viewBox="0 0 32 32" fill="currentColor"><path d="M16 0C7.163 0 0 7.163 0 16c0 2.823.736 5.47 2.02 7.773L0 32l8.47-2.003A15.94 15.94 0 0016 32c8.837 0 16-7.163 16-16S24.837 0 16 0zm8.03 22.21c-.34.956-1.98 1.83-2.72 1.948-.692.11-1.56.156-2.512-.158-.58-.19-1.327-.443-2.283-.868-4.01-1.734-6.63-5.81-6.83-6.08-.198-.27-1.62-2.157-1.62-4.115 0-1.957 1.026-2.92 1.39-3.316.365-.397.795-.497 1.06-.497.265 0 .53.003.762.014.244.012.572-.093.896.684.34.8 1.155 2.756 1.255 2.956.1.198.166.43.033.694-.133.264-.2.43-.397.66-.2.232-.42.517-.6.695-.198.198-.404.413-.174.81.23.397 1.02 1.683 2.19 2.726 1.505 1.343 2.774 1.757 3.17 1.955.398.2.63.167.864-.1.232-.265.993-1.16 1.258-1.557.265-.397.53-.33.895-.2.365.132 2.32 1.095 2.717 1.293.397.2.662.298.762.464.1.166.1.96-.24 1.917z"/></svg>
+            <span id="me-sticky-btn-label">Selecciona plato y postre</span>
+          </a>
+        </div>
+      </div>
+    </aside>
 
     <section class="day-section" id="momentos">
       <div class="day-panel day-image" role="img" aria-label="Olivetta — ambiente del restaurante en distintos momentos del día" style="background-image:url('assets/olivettasee.jpg')"></div>
@@ -260,7 +486,7 @@
         <figure><img src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=1000&q=86" alt="Pasta italiana" loading="lazy" /></figure>
         <figure><img src="https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?auto=format&fit=crop&w=1000&q=86" alt="Postre italiano" loading="lazy" /></figure>
         <figure><img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=1000&q=86" alt="Preparación de cocina italiana" loading="lazy" /></figure>
-        <figure><img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=1000&q=86" alt="Restaurante preparado para el servicio" loading="lazy" /></figure>
+        <figure><img src="assets/condorsuites.jpg" alt="Vista del restaurante Olivetta en Cóndor Suites" loading="lazy" /></figure>
       </div>
     </section>
 
